@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso Privado</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f0f0f0; }
+        .login-container { text-align: center; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        input { padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 20px; margin-top: 15px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Introduce la contraseña para continuar</h2>
+        <input type="password" id="password" placeholder="Contraseña">
+        <br>
+        <button onclick="checkPassword()">Entrar</button>
+    </div>
+    <script>
+        function checkPassword() {
+            // ▼▼▼ CAMBIA ESTA CONTRASEÑA ▼▼▼
+            const passwordCorrecta = "sevilla";
+            let passwordIntroducida = document.getElementById("password").value;
+            if (passwordIntroducida === passwordCorrecta) {
+                window.location.href = "descargas.html";
+            } else {
+                alert("Contraseña incorrecta.");
+            }
+        }
+    </script>
+</body>
+</html>
